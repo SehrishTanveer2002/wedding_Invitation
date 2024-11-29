@@ -56,36 +56,41 @@ END:VCALENDAR`;
       <AnimatePresence>
 
       {step === 0 && (
-          <motion.div
-            key="step1"
-            className="absolute inset-0 flex justify-center items-center"
-            style={{
-              backgroundImage: `url(${nextBackgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ scale: 2.2, opacity: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="relative flex items-center justify-center w-64 h-64 bg-white/90 rounded-full">
-              <h1
-                className="text-[#bb595a] text-4xl font-bold text-center leading-normal"
-                style={{
-                  fontFamily: "'Dancing Script', cursive",
-                }}
-              >
-                HALIMA & YUNUS
-              </h1>
-              <motion.div
-                className="absolute inset-0 border-4 border-dotted rounded-full border-[#bb595a]"
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 7, ease: "linear" }}
-              />
-            </div>
-          </motion.div>
-        )}
+  <motion.div
+    key="step1"
+    className="absolute inset-0 flex justify-center items-center"
+    style={{
+      backgroundImage: `url(${nextBackgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ scale: 2.2, opacity: 0 }}
+    transition={{ duration: 1 }}
+  >
+    <div 
+      className="relative flex items-center justify-center bg-white/90 rounded-full 
+                 w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 xl:w-[30rem] xl:h-[30rem]"
+    >
+      <h1
+        className="text-[#bb595a] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold 
+                   text-center leading-normal"
+        style={{
+          fontFamily: "'Dancing Script', cursive",
+        }}
+      >
+        HALIMA & YUNUS
+      </h1>
+      <motion.div
+        className="absolute inset-0 border-4 border-dotted rounded-full border-[#bb595a]"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 7, ease: "linear" }}
+      />
+    </div>
+  </motion.div>
+)}
+
 
 {step === 1 && (
   <motion.div
