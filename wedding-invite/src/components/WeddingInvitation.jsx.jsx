@@ -58,10 +58,9 @@ END:VCALENDAR`;
       {step === 0 && (
           <motion.div
             key="step1"
-            className="absolute inset-0 flex justify-center items-center"
+            className="absolute inset-0 flex justify-center items-center bg-cover lg:bg-contain lg:bg-no-repeat"
             style={{
               backgroundImage: `url(${nextBackgroundImage})`,
-              backgroundSize: "cover",
               backgroundPosition: "center",
             }}
             initial={{ opacity: 0 }}
@@ -689,20 +688,18 @@ END:VCALENDAR`;
         </motion.div>
       )}
 
+
       <motion.div
-        className="absolute bottom-4 right-4 cursor-pointer z-50"
-        onClick={nextStep}
-      >
-        <FaArrowAltCircleDown size={40} color="#bb595a" />
-      </motion.div>
+  className="absolute bottom-4 right-4 lg:right-80 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer z-50 block"
+  onClick={nextStep}
+>
+  <FaArrowAltCircleDown size={40} color="#bb595a" />
+</motion.div>
 
 
-<motion.div
-          className="absolute bottom-4 right-4 cursor-pointer z-50"
-          onClick={nextStep}
-        >
-          <FaArrowAltCircleDown size={40} color="#bb595a" />
-        </motion.div>
+
+
+        
       </AnimatePresence>
     </div>
   );
