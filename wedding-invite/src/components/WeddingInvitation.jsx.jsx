@@ -71,13 +71,17 @@ END:VCALENDAR`;
   >
     <div 
       className="relative flex items-center justify-center bg-white/90 rounded-full 
-                 w-64 h-64 sm:w-72 sm:h-72 lg:w-auto lg:h-auto shadow-lg lg:shadow-xl"
+                 w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 xl:w-[30rem] xl:h-[30rem]"
     >
-      <img
-        src={nextBackgroundImage}
-        alt="Centered Image"
-        className="max-w-full max-h-full object-contain rounded-lg lg:rounded-xl shadow-lg"
-      />
+      <h1
+        className="text-[#bb595a] text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold 
+                   text-center leading-normal"
+        style={{
+          fontFamily: "'Dancing Script', cursive",
+        }}
+      >
+        HALIMA & YUNUS
+      </h1>
       <motion.div
         className="absolute inset-0 border-4 border-dotted rounded-full border-[#bb595a]"
         animate={{ rotate: 360 }}
@@ -86,7 +90,6 @@ END:VCALENDAR`;
     </div>
   </motion.div>
 )}
-
 
 
 {step === 1 && (
